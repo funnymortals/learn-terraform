@@ -15,7 +15,7 @@ resource "google_compute_instance" "temp" {
   zone         = "europe-west3-a"
 
   boot_disk {
-    initialize_params {
+    initialize_params { 
       image = "debian-cloud/debian-11"
     }
   }
