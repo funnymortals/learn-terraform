@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   my_first_job:
     name: My First Job
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Print Greeting"
         run: echo "Hello, World!"
