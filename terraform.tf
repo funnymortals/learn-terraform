@@ -12,6 +12,13 @@
 } */
 
 terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "5.0.0"
+    }
+  }
+  required_version = ">=0.14.0"
   cloud {
     hostname     = "app.terraform.io"
     organization = "fm-dev"
