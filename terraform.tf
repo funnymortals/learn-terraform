@@ -27,6 +27,11 @@ terraform {
 
     }
   }
+  backend "terraform" {
+    hostname     = "app.terraform.io"
+    organization = "fm-dev"
+    workspaces   = "learn-terraform-dev"
+  }
 }
 
 
