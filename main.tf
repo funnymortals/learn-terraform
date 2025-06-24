@@ -1,6 +1,11 @@
+locals {
+  project_id = "learn-tf-code"
+}
+
 
 resource "google_compute_network" "default" {
-  name = "default"
+  name    = "default"
+  project = local.project_id
 }
 
 import {
@@ -13,9 +18,10 @@ resource "google_compute_instance" "temp" {
   name         = "temp"
   machine_type = "europe-west3"
   zone         = "europe-west3-a"
+  project      = local.project_id
 
   boot_disk {
-    initialize_params { 
+    initialize_params {
       image = "debian-cloud/debian-11"
     }
   }
